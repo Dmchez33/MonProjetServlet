@@ -4,15 +4,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Login</title>
+<link rel="stylesheet" href="/MonServletJsp/longin.css">
 </head>
 <body>
 	<form action="" method="post">
-		<label> pseudo</label>
-		<input type="test" id="pseudo" name="pseudo" />
+		<p><input type="text" id="pseudo" name="pseudo" class="input" placeholder="Pseudo *" /></p>
 		
-		<label> Mot de passe</label>
-		<input type="test" id="pass" name="pass" />
+		<p><input type="password" id="passe" name="passe" class="input" placeholder="Mot de passe *" /></p>
+		
+		<p> <input type="submit" value="Login" /> </p>
 	</form>
 </body>
 </html>

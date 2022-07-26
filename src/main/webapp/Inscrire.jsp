@@ -9,34 +9,47 @@
 <link rel="stylesheet" href="/MonServletJsp/index.css">
 </head>
 <body>
-	<h2>Bienvenu sur la page d'inscription</h2>
 	
-	<form action="Accueil" method="post">
+		<h2>VEUI</h2>
+		<form action="Accueil" method="post">
+			<div class="form">
+				<p>
+					
+					<input type="text" name="nom" id="nom" placeholder="Nom">
+				</p>
+				 <p>
+					
+					<input type="text" name="prenom" id="prenom" placeholder="Prenom">
+				 </p>
+				
+				<p>
+					
+					<input type="email" name="email" id="email" placeholder="Email">
+				 </p>
+				
+				 <p>
+					
+					<input type="text" name="pseudo" id="pseudo" placeholder="Pseudo">
+				 </p>
+				
+				 <p>
+					
+					<input type="password" name="mot_de_passe" id="mot_de_passe" placeholder="Mot De Passe">
+				</p>
+				
+				 <p>
+					
+					<input type="password" name="repete_mot_de_passe" id="repete_mot_de_passe" placeholder="Confirme Mot De Passe">
+				</p>
+				
+				<% if (request.getAttribute("erreur")!=null) { %>
+					<p class="error"> <%= request.getAttribute("erreur") %></p>
+				<%} %>
+				<p class="p"><input type="submit" value="Envoyer" class="envoyer"/></p>
+			</div>
+		</form>
 	
-		  <p>
-		    <label for="nom">Nom</label>
-		    <input type="text" name="nom" id="nom">
-		  </p>
-		
-		  <p>
-		    <label for="prenom">Prenom</label>
-		    <input type="text" name="prenom" id="prenom">
-		  </p>
-		  <p>
-		    <label for="email">Email</label>
-		    <input type="email" name="email" id="email">
-		  </p>
-		  <p>
-		    <label for="passe">Mot de passe</label>
-		    <input type="password" name="passe" id="passe">
-		  </p>
-		  <p>
-		    <label for="repeat-pass">Repeter le mot de passe</label>
-		    <input type="password" name="repeat-pass" id="repeat-pass">
-		  </p>
-		  
-		  <input type="submit" value="Envoyer" />
-	</form>
+
 	
 	<!--  <ul>
 		<c:forEach var="utilisateur" items="${ utilisateurs }">
